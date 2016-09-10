@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <meta name="description" content="A simple document management tool">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="login.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- Reqiured bootstrap script file -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <header class="container-fluid">
+        <section class="row">
+            <section class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                <nav class="main-nav">
+                    <ul class="nav nav-tabs">
+                        <li>
+                            <a class="logo"><span class="logo-txt">LOGO</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </section>
+    </header>
+    <section class="row">
+        <div class="login-panel">
+            <div class="error-msg" id="errorText">
+                <span style="display:none;"> Invalid username or password. <br>
+                                Please try again.</span>
+            </div>
+            <label>Enter your login details</label>
+            <form name="loginForm" id="loginForm" action="index.html">
+                <div class="login-signin-container">
+                    <input type="text" id="name" name="name" class="form-control" placeholder="User name" required autofocus="">
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+                    <div class="checkbox-login checkbox-success">
+                        <input type="checkbox" checked id="signed-in" class="styled" />
+                        <label for="signed-in">Keep me signed in</label>
+                    </div>
+                    <button id="loginButton" class="form-control btn-login" type="submit" onclick="">Login</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
