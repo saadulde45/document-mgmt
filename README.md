@@ -2,72 +2,63 @@
 
 A simple document management application, with a login page and simulated backend.
 
-# Below are the complete list of features. the ones marked as 'MVP' are the one's that are essential -
+### Below is the complete list of features. The ones marked as 'MVP' are the one's that are essential - 
 
-1. Screens - 
-● Login - MVP
-● Landing - MVP
-● Admin specific
-● Priviledged user
-
+1. Screens:
+  1. Login **- MVP**
+  2. Landing **- MVP**
+  3. Admin specific
+  4. Priviledged user
 
 2. User Restrictions - 
-● 3 different kinds of users - Admin, Editor and Guest
-● Only admin type users will be able to access the 'Admin' screen
-● Admin and Editor type users will be able to access the 'Priviledged' screen
-● All users can access 'Landing' screen - MVP
-
+  1. 3 different kinds of users - Admin, Editor and Guest
+  2. Only admin type users will be able to access the 'Admin' screen
+  3. Admin and Editor type users will be able to access the 'Priviledged' screen
+  4. All users can access 'Landing' screen **- MVP**
 
 3. Authentication and Sessions - 
-● An authenticated or unauthorized user should not be able to access secure pages - MVP
-● Session based authentication
-● Session timeouts
-
+  1. An authenticated or unauthorized user should not be able to access secure pages **- MVP**
+  2. Session based authentication
+  3. Session timeouts
 
 4. Landing screen details - 
-● A table with a list of documents (PDF), and related information - MVP
-● Clicking any document must open it in a modal dialog for viewing - MVP
-● The table must have the bells and whistles like pagination - MVP
-● Responsive design to cater to different devices
-● Handling mobile devices is a plus
-
+  1. A table with a list of documents (PDF), and related information **- MVP**
+  2. Clicking any document must open it in a modal dialog for viewing **- MVP**
+  3. The table must have the bells and whistles like pagination **- MVP**
+  4. Responsive design to cater to different devices
+  5. Handling mobile devices is a plus
 
 5. Browser Compatibility - 
-● Chrome 50+
-● Firefox 45+
-● Safari 9+
-● IE 10+
-● Microsoft Edge
+  1. Chrome 50+
+  2. Firefox 45+
+  3. Safari 9+
+  4. IE 10+
+  5. Microsoft Edge
 
-
-
-# TO-DO's 
+### TO-DO's 
 
 1. Design screens -
-● Login - MVP - DONE
-● Landing - MVP - IN PROGRESS
-● Admin specific
-● Priviledged
-
+  - [x] ~~Login **- MVP**~~
+  - [x] ~~Landing **- MVP**~~
+  - [ ] Admin specific
+  - [ ] Priviledged
 
 2. POC's - 
-● PDF in modal window - MVP - DONE
-● Client side authentication - MVP
-
+  - [x] ~~PDF in modal window **- MVP**~~
+  - [ ] Client side authentication **- MVP**
 
 3. Coding - 
-● Basic folder structure - DONE
-● Login screen - DONE
-● Handle authorized and unauthorized routing - IN PROGRESS
-● Landing screen - Pending
-● Table view - Pending
-● PDF POC integration - Pending
-● Responsive layout - Pending
-
+  - [x] ~~Basic folder structure~~
+  - [x] ~~Login screen~~
+  - [ ] Handle authorized and unauthorized routing
+  - [ ] Landing screen
+  - [ ] Table view
+  - [ ] PDF POC integration
+  - [ ] Responsive layout
 
 4. Testing - 
-● Chrome - Pending
-● Firefox - Pending
-● Safari - Pending
-● IE - Pending
-● Microsoft Edge - Pending
+  - [ ] Chrome
+  - [ ] Firefox
+  - [ ] Safari
+  - [ ] IE
+  - [ ] Microsoft Edge
