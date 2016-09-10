@@ -44,21 +44,21 @@ A simple document management application, with a login page and simulated backen
 # TO-DO's 
 
 1. Design screens -
-● Login - MVP
-● Landing - MVP
+● Login - MVP - DONE
+● Landing - MVP - IN PROGRESS
 ● Admin specific
 ● Priviledged
 
 
 2. POC's - 
-● PDF in modal window - MVP
+● PDF in modal window - MVP - DONE
 ● Client side authentication - MVP
 
 
 3. Coding - 
-● Basic folder structure - Pending
-● Login screen - Pending
-● Handle authorized and unauthorized routing - Pending
+● Basic folder structure - DONE
+● Login screen - DONE
+● Handle authorized and unauthorized routing - IN PROGRESS
 ● Landing screen - Pending
 ● Table view - Pending
 ● PDF POC integration - Pending
