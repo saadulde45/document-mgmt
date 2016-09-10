@@ -61,7 +61,6 @@ header {
     color: #063958;
     display: block;
 }
-
 .main-nav ul li:first-child a.logo:hover,
 .main-nav ul li:first-child a.logo:focus {
     background: none;
@@ -91,11 +90,29 @@ header {
     text-align: left;
     padding: 5px 0;
 }
-.checkbox-login label {
-    font-size: 13px;
+input[type=checkbox] {
+    display: none;
 }
-.checkbox-login input {
-    cursor: pointer;
+/* to hide the checkbox itself */
+input[type=checkbox] + label:before {
+    font-family: FontAwesome;
+    display: inline-block;
+}
+input[type=checkbox] + label:before {
+    content: "\f096";
+    font-size: 18px;
+    color: #999999;
+}
+input[type=checkbox] + label:before {
+    letter-spacing: 10px;
+}
+input[type=checkbox]:checked + label:before {
+    content: "\f14a";
+    font-size: 18px;
+    color: #b1cd23;
+}
+input[type=checkbox]:checked + label:before {
+    letter-spacing: 10px;
 }
 .login-signin-container {
     padding: 0px 15px;
