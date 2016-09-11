@@ -24,37 +24,87 @@
     <![endif]-->
     <header class="container-fluid">
         <section class="row">
-            <section class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+            <section class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <nav class="main-nav">
-                    <ul class="nav nav-tabs">
+                    <ul class="nav nav-tabs col-md-offset-4">
                         <li>
-                            <a class="logo"><span class="logo-txt">LOGO</span></a>
+                            <span class="logo-txt">Placeholder 1</span>
+                        </li>
+                        <li>
+                            <span class="logo-txt">View</span>
+                        </li>
+                        <li>
+                            <span class="logo-txt">Search</span>
+                        </li>
+                        <li>
+                            <span class="logo-txt">Placeholder 2</span>
                         </li>
                     </ul>
                 </nav>
             </section>
         </section>
     </header>
-    <section class="row">
+    <section class="row main-container">
         <div class="login-panel">
-            <div class="error-msg" id="errorText">
-                <span style="display:none;"> Invalid username or password. <br>
-                                Please try again.</span>
+            <div class="login-header">
+                <label class="left" style="color: #fff">LOG IN</label>
+                <label class="right forgot-password" id="forgotPassword"><a href="">Forgot Password?</a></label>
             </div>
-            <label>Enter your login details</label>
+            <div class="clear-fix msg-container">
+                <label id="errorText" class="error-text">
+                    Invalid username or password</label>
+                <label id="loginText" class="login-text">Enter your login details</label>
+            </div>
             <form name="loginForm" id="loginForm" action="index.html">
                 <div class="login-signin-container">
                     <input type="text" id="name" name="name" class="form-control" placeholder="User name" required autofocus="">
                     <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
-                    <div class="checkbox-login checkbox-success">
-                        <input type="checkbox" checked id="signed-in" class="styled" />
-                        <label for="signed-in">Keep me signed in</label>
-                    </div>
                     <button id="loginButton" class="form-control btn-login" type="submit" onclick="">Sign In</button>
                 </div>
             </form>
         </div>
     </section>
+    <script type="text/javascript">
+    $("#loginForm").submit(function(event) {
+        event.preventDefault();
+    });
+    $("#loginButton").click(function(event) {
+        // $.ajax({
+        //     'type': "POST",
+        //     'url': "/api/api/auth/login",
+        //     'contentType': 'application/json',
+        //     'data': JSON.stringify({
+        //         "name": $("#name").val(),
+        //         "password": $("#password").val()
+        //     }),
+        //     'success': function(response) {
+        //         if (response.data && response.data.authKey) {
+        //             localStorage.setItem("authKey", response.data.authKey);
+        //             localStorage.setItem("roleId", response.data.roleId);
+        //             window.location.href="/";
+        //         }
+        //     },
+        //     'error': function(response) {
+        //         $("#errorText").show();
+        //     },
+        //     'dataType': 'json'
+        // });
+
+        $("#errorText").hide();
+        $("#loginText").show();
+        $("#forgotPassword").removeClass("forgot-password-active");
+
+        if ($("#name").val() == "admin" && $("#password").val() == "admin") {
+            localStorage.setItem("username", "admin");
+            localStorage.setItem("userRole", "admin");
+            window.location.href = "/";
+        } else {
+            $("#loginText").hide();
+            $("#errorText").show();
+            $("#forgotPassword").addClass("forgot-password-active");
+        }
+    });
+    </script>
 </body>
 
 </html>
