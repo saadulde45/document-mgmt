@@ -11,7 +11,7 @@ body {
     color: #777777;
 }
 
-header {
+header, footer {
     background: #000;
     height: 110px;
 }
