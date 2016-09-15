@@ -105,7 +105,7 @@
                 "username": "admin",
                 "password": "admin"
             };
-            localStorage.setItem("userData", JSON.stringify(user));
+            window.sessionStorage.setItem("userData", JSON.stringify(user));
             window.location.href = "/";
         } else {
             $("#loginText").hide();

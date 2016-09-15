@@ -27,7 +27,7 @@
 
 
             //the login function
-            authService.login = function(user, success, error, $log) {
+            authService.login = function(user, success, error) {
                 //$http.post('users.json').success(function(data) {
                 var data = usersJson;
                 //this is my dummy technique, normally here the 
@@ -38,9 +38,7 @@
                     var loginData = users[user.username];
                     //insert your custom login function here 
                     if (user.username == loginData.username && user.password == loginData.username) {
-                        //set the browser session, to avoid relogin on refresh
-                        $window.sessionStorage["userInfo"] = JSON.stringify(loginData);
-
+                        
                         //delete password not to be seen clientside 
                         delete loginData.password;
 
@@ -87,7 +85,7 @@
             //log out the user and broadcast the logoutSuccess event
             authService.logout = function() {
                 Session.destroy();
-                $window.sessionStorage.removeItem("userInfo");
+                $window.sessionStorage.removeItem("userData");
                 $rootScope.$broadcast(AUTH_EVENTS.logoutSuccess);
             }
 

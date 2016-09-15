@@ -6,11 +6,11 @@
         .run(runBlock);
 
     /** @ngInject */
-    function runBlock($log, $rootScope, AUTH_EVENTS, Auth, $state) {
+    function runBlock($log, $rootScope, AUTH_EVENTS, Auth, $state, $window) {
 
         $log.debug('runBlock end');
 
-        var credentials = JSON.parse(localStorage.getItem("userData"));
+        var credentials = JSON.parse(window.sessionStorage.getItem("userData"));
 
         Auth.login(credentials, function(success) {
             //success function
@@ -18,7 +18,7 @@
             $state.go('home');
         }, function(err) {
             $log.error("error", err);
-            window.location.href = "/login.html";
+            $window.location.href = "/login.html";
         });
 
         //before each state change, check if the user is logged in
@@ -39,8 +39,6 @@
                 }
             }
         });
-
-
     }
 
 })();
