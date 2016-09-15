@@ -45,7 +45,7 @@ A simple document management application, with a login page and simulated backen
 
 2. POC's - 
   - [x] ~~PDF in modal window **- MVP**~~
-  - [x] Client side authentication **- MVP**
+  - [x] ~~Client side authentication **- MVP**~~
 
 3. Coding - 
   - [x] ~~Basic folder structure~~
