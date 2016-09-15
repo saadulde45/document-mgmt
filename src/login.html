@@ -101,8 +101,11 @@
         $("#forgotPassword").removeClass("forgot-password-active");
 
         if ($("#name").val() == "admin" && $("#password").val() == "admin") {
-            localStorage.setItem("username", "admin");
-            localStorage.setItem("userRole", "admin");
+            var user = {
+                "username": "admin",
+                "password": "admin"
+            };
+            localStorage.setItem("userData", JSON.stringify(user));
             window.location.href = "/";
         } else {
             $("#loginText").hide();
