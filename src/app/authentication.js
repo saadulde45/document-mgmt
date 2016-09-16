@@ -87,6 +87,7 @@
                 Session.destroy();
                 $window.sessionStorage.removeItem("userData");
                 $rootScope.$broadcast(AUTH_EVENTS.logoutSuccess);
+                $window.location.href = "/login.html";
             }
 
             return authService;

@@ -6,8 +6,13 @@
         .controller('MainController', MainController);
 
     /** @ngInject */
-    function MainController() {
+    function MainController(Auth, $rootScope, AUTH_EVENTS, $window) {
 
+        var vm = this;
+
+        vm.logout = function() {
+            Auth.logout();
+        };
 
     }
 })();

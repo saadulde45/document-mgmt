@@ -10,7 +10,7 @@
 
         $log.debug('runBlock end');
 
-        var credentials = JSON.parse(window.sessionStorage.getItem("userData"));
+        var credentials = JSON.parse($window.sessionStorage.getItem("userData"));
 
         Auth.login(credentials, function(success) {
             //success function

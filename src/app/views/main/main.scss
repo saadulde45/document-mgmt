@@ -1,0 +1,119 @@
+$primary-background: #000;
+$primary-color: #fff;
+$primary-btn-color: #DC9530;
+$primary-font-family: Helvetica,
+Arial,
+sans-serif;
+$primary-font-size: 12px;
+$link-color: #DC9530;
+$anchor-color: #AAAAAA;
+
+/*Header*/
+
+header {
+    background: $primary-background;
+}
+
+.login-section {
+    .btn-default {
+        border: none;
+        background: none;
+    }
+}
+
+
+/* main-content */
+
+.main-content {
+    background-color: #f7f7f7;
+    padding-top: 35px;
+}
+
+.main-nav {
+    ul {
+        border-bottom: 0;
+        li {
+            border: 0;
+            margin-bottom: 0;
+            a {
+                border-bottom-color: transparent;
+                cursor: default;
+                line-height: 48px;
+                padding: 10px 30px;
+                border-radius: 0;
+                font-size: 16px;
+                color: $anchor-color;
+                border: 0;
+                &:hover,
+                &:focus {
+                    padding: 10px 30px 3px;
+                    border-bottom: 7px solid $link-color;
+                    color: $primary-color;
+                    background: $primary-background;
+                }
+            }
+            &.active {
+                a {
+                    border: 0;
+                    color: #fff;
+                    &:hover,
+                    &:focus {
+                        border-bottom: 3px solid $link-color;
+                        color: $primary-color;
+                        background: $primary-background;
+                    }
+                }
+            }
+            &:first-child {
+                a.logo {
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    line-height: 16px;
+                    margin-top: 5px;
+                    margin-right: 100px;
+                    padding-left: 0;
+                    &:hover,
+                    &:focus {
+                        background: none;
+                        border: 0;
+                    }
+                    img {
+                        width: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.profile-menu {
+    left: auto;
+    right: 0;
+}
+
+.profile-nav {
+    margin: 15px 0 0;
+    li {
+        a.user-name {
+            box-shadow: none !important;
+            color: #fff;
+            .user {
+                margin-right: 5px;
+            }
+            .fa {
+                color: #fff
+            }
+        }
+    }
+    img {
+        border-radius: 50%;
+        max-width: 32px !important;
+        width: 100%;
+        border: 2px solid #c4d4f0;
+    }
+}
+
+.dropdown ul.dropdown-menu:before {
+    right: 6px;
+    z-index: 10;
+}
