@@ -1,38 +1,16 @@
 (function() {
     'use strict';
 
-    var usersJson = {
-        "users": {
-            "admin": {
-                "username": "admin",
-                "password": "admin",
-                "userRole": "admin"
-            },
-            "editor": {
-                "username": "editor",
-                "password": "editor",
-                "userRole": "editor"
-            },
-            "guest": {
-                "username": "guest",
-                "password": "guest",
-                "userRole": "guest"
-            }
-        }
-    };
-
     angular.module('documentMgmt')
-        .factory('Auth', function($http, $rootScope, $window, Session, AUTH_EVENTS) {
+        .factory('Auth', function($http, $rootScope, $window, Session, AUTH_EVENTS, USERS) {
             var authService = {};
 
 
             //the login function
             authService.login = function(user, success, error) {
-                //$http.post('users.json').success(function(data) {
-                var data = usersJson;
                 //this is my dummy technique, normally here the 
                 //user is returned with his data from the db
-                var users = data.users;
+                var users = USERS;
 
 				if (user && users[user.username]) {
                     var loginData = users[user.username];

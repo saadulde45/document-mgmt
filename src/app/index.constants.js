@@ -18,6 +18,22 @@
             sessionTimeout: 'auth-session-timeout',
             notAuthenticated: 'auth-not-authenticated',
             notAuthorized: 'auth-not-authorized'
-        })  ;
+        }).constant('USERS', {
+            "admin": {
+                "username": "admin",
+                "password": "admin",
+                "userRole": "admin"
+            },
+            "editor": {
+                "username": "editor",
+                "password": "editor",
+                "userRole": "editor"
+            },
+            "guest": {
+                "username": "guest",
+                "password": "guest",
+                "userRole": "guest"
+            }
+        });
 
 })();
