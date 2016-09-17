@@ -8,13 +8,18 @@
     /** @ngInject */
     function routerConfig($stateProvider, $urlRouterProvider, USER_ROLES) {
         $stateProvider
-            .state('home', {
+            .state('app', {
                 url: '/',
-                templateUrl: 'app/views/main/main.html',
-                controller: 'MainController',
-                controllerAs: 'main',
                 data: {
                     authorizedRoles: [USER_ROLES.admin, USER_ROLES.editor, USER_ROLES.guest]
+                },
+                redirectTo: 'app.dashboard',
+                views: {
+                    'app': {
+                        templateUrl: 'app/views/main/main.html',
+                        controller: 'MainController',
+                        controllerAs: 'main'
+                    }
                 }
             });
 

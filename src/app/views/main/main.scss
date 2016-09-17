@@ -36,7 +36,9 @@ $anchor-color: #AAAAAA;
         font-size: $primary-font-size;
         color: $anchor-color !important;
         border: 0;
-        &:hover,
+        &:hover {
+            color: $primary-color !important;
+        };
         &:focus {
             padding-bottom: 10px;
             border-bottom: 5px solid $link-color;
@@ -90,4 +92,8 @@ $anchor-color: #AAAAAA;
         top: -4px;
         right: 13px;
     }
+}
+
+.content {
+    margin-top: 50px;
 }
