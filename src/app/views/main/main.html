@@ -1,35 +1,32 @@
 <header class="container-fluid">
-    <section class="row">
-        <section class="col-lg-9 col-md-9 col-sm-9 col-xs-9 container-fluid">
-            <nav class="main-nav">
-                <ul class="nav nav-tabs" ui-view="navigation">
-                    <li>
-                        <a class="logo"><img src="../assets/images/logo.png" alt="logo"><span>LOGO</span></a>
-                    </li>
-                    <li>
-                        <a>Dashboard</a>
-                    </li>
-                    <li>
-                        <a>List</a>
-                    </li>
-                </ul>
-            </nav>
-        </section>
-        <section class="col-lg-3 col-md-3 col-sm-3 col-xs-3 login-section">
-            <div>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+            <a class="navbar-brand"><img src="../assets/images/logo.png" alt="logo"></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a>Dashboard</a></li>
+                <li><a>List</a></li>
+            </ul>
+            <div class="navbar-header navbar-right">
                 <ul class="list-inline profile-nav pull-right">
-                    <li class="btn-group" uib-dropdown is-open="true">
-                        <a uib-dropdown-toggle ng-disabled="disabled" class="user-name" style="cursor: pointer;">
-                            <img src="../assets/images/user-pic.png" alt="user"> <span class="user">{{user.firstName}} {{user.lastName}}</span>
-                            <i class="fa fa-caret-down" aria-hidden="true"></i>
-                        </a>
-                        <ul class="dropdown-menu profile-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                    <li class="btn-group" uib-dropdown is-open="false">
+                        <div uib-dropdown-toggle ng-disabled="disabled" class="user-name">
+                            <span class="user">John Doe</span>
+                            <img src="../assets/images/user-pic.png" alt="user">
+                        </div>
+                        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
                             <li role="menuitem" ng-click="main.logout()" style="cursor: pointer;"><a>Logout</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
-        </section>
-    </section>
+        </div>
+    </nav>
 </header>
 <div ui-view></div>

@@ -6,7 +6,7 @@
         .controller('MainController', MainController);
 
     /** @ngInject */
-    function MainController(Auth, $rootScope, AUTH_EVENTS, $window) {
+    function MainController(Auth) {
 
         var vm = this;
 
