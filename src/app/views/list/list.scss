@@ -60,14 +60,14 @@
             .pagination-next {
                 a {
                     background-color: #353535;
-                    color: #fff!important;
+                    color: #fff;
                     border-color: #340;
                 }
             }
             .pagination-page {
                 a {
                     background-color: #353535;
-                    color: #fff!important;
+                    color: #fff;
                     border-color: #340;
                 }
             }
@@ -76,6 +76,11 @@
                     background-color: #DC9530;
                     border-color: #DC9530;
                 }
+            }
+            .disabled {
+            a {
+                color: #616161;
+            }
             }
         }
     }
