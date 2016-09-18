@@ -6,14 +6,20 @@
         .run(runBlock);
 
     /** @ngInject */
-    function runBlock($log, $rootScope, AUTH_EVENTS, Auth, $state, $window) {
+    function runBlock($log, $rootScope, AUTH_EVENTS, AuthenticationService, $state, $window, UserService) {
 
         var credentials = JSON.parse($window.sessionStorage.getItem("userData"));
 
-        Auth.login(credentials, function(success) {
-            //success function
-            $log.info('logging in', success);
-            $state.go('app.dashboard');
+        AuthenticationService.login(credentials, function(success) {
+            
+            UserService.getUserDetails().userData.$promise
+            .then(function(response) {
+                $rootScope.userDetails = response.data;
+                $state.go('app.dashboard');
+            })
+            .catch(function(error) {
+                $log.error('error', error);
+            });
         }, function(err) {
             $log.error("error", err);
             $window.location.href = "/login.html";
@@ -26,9 +32,9 @@
 
             var authorizedRoles = toState.data.authorizedRoles;
 
-            if (!Auth.isAuthorized(authorizedRoles)) {
+            if (!AuthenticationService.isAuthorized(authorizedRoles)) {
                 event.preventDefault();
-                if (Auth.isAuthenticated()) {
+                if (AuthenticationService.isAuthenticated()) {
                     // user is not allowed
                     $rootScope.$broadcast(AUTH_EVENTS.notAuthorized);
                 } else {

@@ -1,8 +1,10 @@
 (function() {
-    'use strict';
+        'use strict';
 
-    angular.module('documentMgmt')
-        .factory('Auth', function($http, $rootScope, $window, Session, AUTH_EVENTS, USERS) {
+        angular.module('documentMgmt')
+            .service('AuthenticationService', AuthenticationService);
+
+        function AuthenticationService($http, $rootScope, $window, Session, AUTH_EVENTS, USERS) {
             var authService = {};
 
 
@@ -12,11 +14,11 @@
                 //user is returned with his data from the db
                 var users = USERS;
 
-				if (user && users[user.username]) {
+                if (user && users[user.username]) {
                     var loginData = users[user.username];
                     //insert your custom login function here 
                     if (user.username == loginData.username && user.password == loginData.username) {
-                        
+
                         //delete password not to be seen clientside 
                         delete loginData.password;
 
@@ -69,6 +71,6 @@
             }
 
             return authService;
-        });
+        };
 
 })();

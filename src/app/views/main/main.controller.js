@@ -6,12 +6,12 @@
         .controller('MainController', MainController);
 
     /** @ngInject */
-    function MainController(Auth) {
+    function MainController(AuthenticationService) {
 
         var vm = this;
 
         vm.logout = function() {
-            Auth.logout();
+            AuAuthenticationServiceth.logout();
         };
 
     }

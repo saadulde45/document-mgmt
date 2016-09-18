@@ -1,0 +1,20 @@
+{
+    "statusCode": 200,
+    "message": null,
+    "data": {
+        "userInfo": {
+            "firstName": "Saad",
+            "lastName": "Ulde",
+            "email": "saadulde45@gmail.com",
+            "userId": "u045",
+            "userRole": "admin"
+        },
+        "features": [{
+            "feature": "dashboard",
+            "displayText": "Dashboard"
+        }, {
+            "feature": "list",
+            "displayText": "List"
+        }]
+    }
+}
