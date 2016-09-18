@@ -53,9 +53,9 @@ A simple document management application, with a login page and simulated backen
   - [x] ~~Handle authorized and unauthorized routing~~
   - [x] ~~Landing screen~~
   - [x] ~~Table view~~
-  - [ ] Create mock services
-  - [ ] Integrate mock services
-  - [ ] PDF POC integration
+  - [x] ~~Create mock services~~
+  - [x] ~~Integrate mock services~~
+  - [x] ~~PDF POC integration~~
   - [ ] Responsive layout
 
 4. Testing - 
