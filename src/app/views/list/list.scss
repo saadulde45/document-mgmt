@@ -1,4 +1,5 @@
 .list-view {
+    $breakpoint-alpha: 768px;
     background-color: #000;
     header.list-header {
         padding: 15px 0;
@@ -7,10 +8,18 @@
             font-size: 16px;
             margin-top: 25px;
             text-transform: uppercase;
-            color: #f2f2f2
+            color: #f2f2f2;
+            @media (max-width: $breakpoint-alpha) {
+                margin: 0 35%;
+            }
+            @media (max-width: 605px) {
+                margin: 0 30%;
+            }
+            @media (max-width: 480px) {
+                margin: 0 25%;
+            }
         }
     }
-    $breakpoint-alpha: 480px;
     .table-container {
         padding: 20px;
         background-color: #222;
@@ -26,6 +35,7 @@
                 background-color: #DC9530;
                 padding-left: 10px !important;
                 display: none;
+                text-transform: uppercase;
             }
             td {
                 display: block;
@@ -33,7 +43,8 @@
                 &:before {
                     content: attr(data-th)": ";
                     font-weight: bold;
-                    width: 6.5em;
+                    width: 45%;
+                    text-transform: uppercase;
                     display: inline-block;
                     @media (min-width: $breakpoint-alpha) {
                         display: none;
@@ -45,7 +56,7 @@
                 text-align: left;
                 @media (min-width: $breakpoint-alpha) {
                     display: table-cell;
-                    padding: .25em .5em;
+                    padding: 5px;
                 }
             }
         }
@@ -54,6 +65,12 @@
         background-color: #222;
         height: 75px;
         padding-right: 20px;
+        @media (max-width: $breakpoint-alpha) {
+            padding-right: 25%;
+        }
+        @media (max-width: 480px) {
+            padding-right: 20%;
+        }
         .pagination {
             float: right;
             .pagination-prev,
@@ -78,9 +95,9 @@
                 }
             }
             .disabled {
-            a {
-                color: #616161;
-            }
+                a {
+                    color: #616161;
+                }
             }
         }
     }
