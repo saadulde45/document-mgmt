@@ -13,7 +13,7 @@
                 data: {
                     authorizedRoles: [USER_ROLES.admin, USER_ROLES.editor, USER_ROLES.guest]
                 },
-                redirectTo: 'app.dashboard',
+                redirectTo: 'app.list',
                 views: {
                     'app': {
                         templateUrl: 'app/views/main/main.html',
