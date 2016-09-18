@@ -1,10 +1,82 @@
-.list-header {
-    padding: 15px 0;
-    margin: 0 5px;
-    .table-title {
-        font-size: 16px;
-        margin-top: 25px;
-        text-transform: uppercase;
-        color: #f2f2f2
+.list-view {
+    background-color: #000;
+    header.list-header {
+        padding: 15px 0;
+        margin: 0 5px;
+        .table-title {
+            font-size: 16px;
+            margin-top: 25px;
+            text-transform: uppercase;
+            color: #f2f2f2
+        }
+    }
+    $breakpoint-alpha: 480px;
+    .table-container {
+        padding: 20px;
+        background-color: #222;
+        .rwd-table {
+            width: 100%;
+            line-height: 3;
+            color: #fff;
+            border-bottom: 1px solid #353535;
+            tr:nth-of-type(odd) {
+                background-color: #353535 !important;
+            }
+            th {
+                background-color: #DC9530;
+                padding-left: 10px !important;
+                display: none;
+            }
+            td {
+                display: block;
+                padding-left: 10px !important;
+                &:before {
+                    content: attr(data-th)": ";
+                    font-weight: bold;
+                    width: 6.5em;
+                    display: inline-block;
+                    @media (min-width: $breakpoint-alpha) {
+                        display: none;
+                    }
+                }
+            }
+            th,
+            td {
+                text-align: left;
+                @media (min-width: $breakpoint-alpha) {
+                    display: table-cell;
+                    padding: .25em .5em;
+                }
+            }
+        }
+    }
+    footer {
+        background-color: #222;
+        height: 75px;
+        padding-right: 20px;
+        .pagination {
+            float: right;
+            .pagination-prev,
+            .pagination-next {
+                a {
+                    background-color: #353535;
+                    color: #fff!important;
+                    border-color: #340;
+                }
+            }
+            .pagination-page {
+                a {
+                    background-color: #353535;
+                    color: #fff!important;
+                    border-color: #340;
+                }
+            }
+            .active {
+                a {
+                    background-color: #DC9530;
+                    border-color: #DC9530;
+                }
+            }
+        }
     }
 }

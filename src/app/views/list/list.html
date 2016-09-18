@@ -1,8 +1,8 @@
-<section class="container-fluid">
+<section class="container-fluid list-view">
     <header class="row list-header">
         <div class="col-md-10">
-        	<label class="table-title">
-            All Documents | 10
+            <label class="table-title">
+                All Documents | 10
             </label>
         </div>
         <div class="col-md-2">
@@ -10,4 +10,35 @@
             <input name="search-field" type="text" placeholder="Search" class="form-control" aria-label="...">
         </div>
     </header>
+    <section class="table-container">
+        <table class="rwd-table table-striped">
+            <tr>
+                <th>Document Name</th>
+                <th>Uploader</th>
+                <th>Link</th>
+                <th>Updated Date</th>
+            </tr>
+            <tr>
+                <td data-th="Document Name">Random Text 1</td>
+                <td data-th="Uploader">John Doe</td>
+                <td data-th="Link"><a href="">Link 1</a></td>
+                <td data-th="Uploaded Date">18/09/2016</td>
+            </tr>
+            <tr>
+                <td data-th="Document Name">Random Text 1</td>
+                <td data-th="Uploader">Will Smith</td>
+                <td data-th="Link"><a href="">Link 2</a></td>
+                <td data-th="Uploaded Date">18/09/2016</td>
+            </tr>
+            <tr>
+                <td data-th="Document Name">Random Text 1</td>
+                <td data-th="Uploader">Sally Smith</td>
+                <td data-th="Link"><a href="">Link 3</a></td>
+                <td data-th="Uploaded Date">18/09/2016</td>
+            </tr>
+        </table>
+    </section>
+    <footer>
+        <ul uib-pagination total-items="list.bigTotalItems" ng-model="list.bigCurrentPage" max-size="list.maxSize" boundary-link-numbers="true" rotate="false"></ul>
+    </footer>
 </section>

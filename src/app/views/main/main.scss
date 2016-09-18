@@ -10,9 +10,17 @@ $anchor-color: #AAAAAA;
 
 /*Header*/
 
+a:focus {
+    outline: none;
+}
+
 .container-fluid {
     padding-left: 0 !important;
     padding-right: 0 !important;
+}
+
+.parent-container {
+    height: 100vh;
 }
 
 .navbar-header {
@@ -48,7 +56,6 @@ $anchor-color: #AAAAAA;
             padding-bottom: 10px;
             border-bottom: 5px solid $link-color;
             color: $primary-color !important;
-            background: #000 !important;
         }
     }
     &.active {
@@ -61,7 +68,6 @@ $anchor-color: #AAAAAA;
                 padding-bottom: 10px;
                 border-bottom: 5px solid $link-color;
                 color: $primary-color !important;
-                background: #000 !important;
             }
         }
     }
@@ -100,6 +106,7 @@ $anchor-color: #AAAAAA;
 }
 
 .content {
-    margin-top: 50px;
+    height: 100%;
+    padding-top: 50px;
     background-color: #000;
 }

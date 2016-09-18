@@ -25,8 +25,8 @@
                 views: {
                     'content@app': {
                         templateUrl: 'app/views/list/list.html',
-                        // controller: 'ListController',
-                        // controllerAs: 'list'
+                        controller: 'ListController',
+                        controllerAs: 'list'
                     }
                 },
                 data: {
