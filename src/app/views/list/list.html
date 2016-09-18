@@ -13,17 +13,21 @@
     <section class="table-container">
         <table class="rwd-table table-striped">
             <tr>
-                <th ng-repeat="column in list.columns">{{column.display_name}}</th>
+                <th>Document Name</th>
+                <th>Uploaded By</th>
+                <th>Link</th>
+                <th>Uploaded Date</th>
             </tr>
-            <tr ng-repeat="row in list.list">
-                <td data-th="list.columns[0].display_name">{{row.name}}</td>
-                <td data-th="list.columns[1].display_name">{{row.uploader}}</td>
-                <td data-th="list.columns[2].display_name"><a ng-click="list.dialog(row)">Document Link</a></td>
-                <td data-th="list.columns[3].display_name">{{row.date}}</td>
+            <tr ng-if="list.list.length == 0"> <td colspan="12" data-th="Note">No Data Available</td></tr>
+            <tr ng-if="list.list.length > 0" ng-repeat="row in list.list">
+                <td data-th="Document Name">{{row.name}}</td>
+                <td data-th="Uploaded By">{{row.uploader}}</td>
+                <td data-th="Link"><a ng-click="list.dialog(row)">Document Link</a></td>
+                <td data-th="Uploaded Dated">{{row.date}}</td>
             </tr>
         </table>
     </section>
-    <footer>
+    <footer ng-if="list.list.length > 0">
         <ul uib-pagination total-items="list.totalRecords" ng-model="list.currentPage" max-size="list.maxSize" boundary-link-numbers="true" rotate="false"></ul>
     </footer>
 </section>

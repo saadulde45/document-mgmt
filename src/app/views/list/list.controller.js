@@ -14,7 +14,6 @@
 
         TableService.getTableData().tableData.$promise
             .then(function(response) {
-                vm.columns = response.data.columns;
                 vm.list = response.data.list;
                 vm.totalRecords = response.data.total_records;
             })
