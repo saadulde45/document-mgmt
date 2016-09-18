@@ -6,7 +6,7 @@
         .run(runBlock);
 
     /** @ngInject */
-    function runBlock($log, $rootScope, AUTH_EVENTS, AuthenticationService, $state, $window, UserService) {
+    function runBlock($log, $rootScope, AUTH_EVENTS, AuthenticationService, $state, $window, UserService, toastr) {
 
         var credentials = JSON.parse($window.sessionStorage.getItem("userData"));
 
@@ -19,9 +19,11 @@
             })
             .catch(function(error) {
                 $log.error('error', error);
+                toastr.error('Error', error.message);
             });
         }, function(err) {
             $log.error("error", err);
+            toastr.error('Error', err);
             $window.location.href = "/login.html";
         });
 
