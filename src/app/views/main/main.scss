@@ -53,22 +53,18 @@ a:focus {
             color: $primary-color !important;
         };
         &:focus {
-            padding-bottom: 10px;
             border-bottom: 5px solid $link-color;
             color: $primary-color !important;
         }
     }
-    &.active {
-        a {
-            border: 0;
-            color: #fff !important;
+    .active {
+        border: 0;
+        color: #fff !important;
+        border-bottom: 5px solid $link-color;
+        &:hover,
+        &:focus {
             border-bottom: 5px solid $link-color;
-            &:hover,
-            &:focus {
-                padding-bottom: 10px;
-                border-bottom: 5px solid $link-color;
-                color: $primary-color !important;
-            }
+            color: $primary-color !important;
         }
     }
 }
