@@ -12,7 +12,7 @@
             return {
                 userData: userData
             };
-        };
+        }
 
         return {
             getUserDetails: getUserDetails

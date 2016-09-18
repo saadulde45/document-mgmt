@@ -7,21 +7,21 @@
 
     function UserResourceGateway($resource) {
 
-    	var userResource = $resource('mock-data/user-details.json', {}, {
-    	// var userResource = $resource('api/user', {}, {
-    		getUserDetails: {
-    			method: 'GET',
-    			cache: false,
-    			headers: {
-    				'auth-key': ''
-    			}
-    		}
+        var userResource = $resource('mock-data/user-details.json', {}, {
+            // var userResource = $resource('api/user', {}, {
+            getUserDetails: {
+                method: 'GET',
+                cache: false,
+                headers: {
+                    'auth-key': ''
+                }
+            }
 
-    	});
+        });
 
-    	return {
-    		getUserDetails: userResource.getUserDetails
-    	}
+        return {
+            getUserDetails: userResource.getUserDetails
+        }
 
-    };
+    }
 })();

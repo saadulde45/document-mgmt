@@ -11,9 +11,7 @@
                 url: 'dashboard',
                 views: {
                     'content@app': {
-                        templateUrl: 'app/views/dashboard/dashboard.html',
-                        // controller: 'DashboardController',
-                        // controllerAs: 'dashboard'
+                        templateUrl: 'app/views/dashboard/dashboard.html'
                     }
                 },
                 data: {

@@ -11,7 +11,7 @@
         var vm = this;
 
         vm.logout = function() {
-            AuAuthenticationServiceth.logout();
+            AuthenticationService.logout();
         };
 
     }

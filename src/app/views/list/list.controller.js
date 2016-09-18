@@ -6,14 +6,37 @@
         .controller("ListController", ListController);
 
     /** @ngInject */
-    function ListController() {
+    function ListController(TableService, $log, $uibModal) {
         var vm = this;
 
-        vm.bigTotalItems = 45;
-        vm.bigCurrentPage = 1;
+        vm.currentPage = 1;
         vm.maxSize = 5;
 
-        vm.totalItems = 64;
-        vm.currentPage = 4;
-    };
+        TableService.getTableData().tableData.$promise
+            .then(function(response) {
+                vm.columns = response.data.columns;
+                vm.list = response.data.list;
+                vm.totalRecords = response.data.total_records;
+            })
+            .catch(function(error) {
+                $log.error("error", error);
+            });
+
+        vm.dialog = function(document) {
+            $uibModal.open({
+                animation: true,
+                ariaLabelledBy: 'modal-title',
+                ariaDescribedBy: 'modal-body',
+                templateUrl: 'app/views/list/pdf-viewer.template.html',
+                controller: function($uibModalInstance) {
+                    var vm = this;
+                    vm.document = document;
+                    vm.cancel = function() {
+                        $uibModalInstance.dismiss('cancel');
+                    };
+                },
+                controllerAs: 'pdfView'
+            });
+        };
+    }
 })();

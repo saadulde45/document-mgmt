@@ -2,7 +2,7 @@
     <header class="row list-header">
         <div class="col-lg-10 col-md-9 col-sm-8 col-xs-12">
             <label class="table-title">
-                All Documents | 10
+                All Documents | {{list.totalRecords}}
             </label>
         </div>
         <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
@@ -13,32 +13,17 @@
     <section class="table-container">
         <table class="rwd-table table-striped">
             <tr>
-                <th>Document Name</th>
-                <th>Uploader</th>
-                <th>Link</th>
-                <th>Updated Date</th>
+                <th ng-repeat="column in list.columns">{{column.display_name}}</th>
             </tr>
-            <tr>
-                <td data-th="Document Name">Random Text 1</td>
-                <td data-th="Uploader">John Doe</td>
-                <td data-th="Link"><a href="">Link 1</a></td>
-                <td data-th="Uploaded Date">18/09/2016</td>
-            </tr>
-            <tr>
-                <td data-th="Document Name">Random Text 1</td>
-                <td data-th="Uploader">Will Smith</td>
-                <td data-th="Link"><a href="">Link 2</a></td>
-                <td data-th="Uploaded Date">18/09/2016</td>
-            </tr>
-            <tr>
-                <td data-th="Document Name">Random Text 1</td>
-                <td data-th="Uploader">Sally Smith</td>
-                <td data-th="Link"><a href="">Link 3</a></td>
-                <td data-th="Uploaded Date">18/09/2016</td>
+            <tr ng-repeat="row in list.list">
+                <td data-th="list.columns[0].display_name">{{row.name}}</td>
+                <td data-th="list.columns[1].display_name">{{row.uploader}}</td>
+                <td data-th="list.columns[2].display_name"><a ng-click="list.dialog(row)">Document Link</a></td>
+                <td data-th="list.columns[3].display_name">{{row.date}}</td>
             </tr>
         </table>
     </section>
     <footer>
-        <ul uib-pagination total-items="list.bigTotalItems" ng-model="list.bigCurrentPage" max-size="list.maxSize" boundary-link-numbers="true" rotate="false"></ul>
+        <ul uib-pagination total-items="list.totalRecords" ng-model="list.currentPage" max-size="list.maxSize" boundary-link-numbers="true" rotate="false"></ul>
     </footer>
 </section>

@@ -1,0 +1,36 @@
+{
+    "statusCode": 200,
+    "message": null,
+    "data": {
+        "total_records": 45,
+        "columns": [{
+            "display_name": "Document Name",
+            "column_name": "name"
+        }, {
+            "display_name": "Uploaded By",
+            "column_name": "uploader"
+        }, {
+            "display_name": "Link",
+            "column_name": "pdf_link"
+        }, {
+            "display_name": "Uploaded Date",
+            "column_name": "date"
+        }],
+        "list": [{
+            "name": "Random Text 1",
+            "uploader": "John Doe",
+            "pdf_link": "assets/pdf-files/Test.pdf",
+            "date": "18/09/2016"
+        }, {
+            "name": "Random Text 2",
+            "uploader": "Will Smith",
+            "pdf_link": "assets/pdf-files/Test.pdf",
+            "date": "18/09/2016"
+        }, {
+            "name": "Random Text 3",
+            "uploader": "Sally Smith",
+            "pdf_link": "assets/pdf-files/Test.pdf",
+            "date": "18/09/2016"
+        }]
+    }
+}

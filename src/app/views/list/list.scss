@@ -1,3 +1,25 @@
+.modal {
+    .modal-content {
+        background-color: #222;
+        color: #fff;
+        border-color: #616161;
+    }
+    .modal-header {
+        border-color: #616161;
+        .close {
+            color: #fff;
+            opacity: 0.7;
+        }
+    }
+    .modal-dialog {
+        width: 785px;
+    }
+    .pdf-view {
+        width: 750px;
+        height: 600px;
+    }
+}
+
 .list-view {
     $breakpoint-alpha: 768px;
     background-color: #000;

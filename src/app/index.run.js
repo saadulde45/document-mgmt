@@ -15,7 +15,7 @@
             UserService.getUserDetails().userData.$promise
             .then(function(response) {
                 $rootScope.userDetails = response.data;
-                $state.go('app.dashboard');
+                $state.go('app.list');
             })
             .catch(function(error) {
                 $log.error('error', error);

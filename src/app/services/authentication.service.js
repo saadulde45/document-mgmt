@@ -71,6 +71,6 @@
             }
 
             return authService;
-        };
+        }
 
 })();
