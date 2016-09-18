@@ -51,8 +51,8 @@ A simple document management application, with a login page and simulated backen
   - [x] ~~Basic folder structure~~
   - [x] ~~Login screen~~
   - [x] ~~Handle authorized and unauthorized routing~~
-  - [ ] Landing screen
-  - [ ] Table view
+  - [x] ~~Landing screen~~
+  - [x] ~~Table view~~
   - [ ] PDF POC integration
   - [ ] Responsive layout
 
