@@ -1,0 +1,23 @@
+{
+    "statusCode": 200,
+    "message": null,
+    "data": {
+        "total_records": 3,
+        "list": [{
+            "name": "Random Text 1",
+            "uploader": "John Doe",
+            "pdf_link": "assets/pdf-files/john-doe.pdf",
+            "date": "18/09/2016"
+        }, {
+            "name": "Random Text 2",
+            "uploader": "Will Smith",
+            "pdf_link": "assets/pdf-files/will-smith.pdf",
+            "date": "18/09/2016"
+        }, {
+            "name": "Random Text 3",
+            "uploader": "Sally Smith",
+            "pdf_link": "assets/pdf-files/sally-smith.pdf",
+            "date": "18/09/2016"
+        }]
+    }
+}
