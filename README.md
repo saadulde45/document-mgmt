@@ -59,8 +59,8 @@ A simple document management application, with a login page and simulated backen
   - [x] ~~Responsive layout~~
 
 4. Testing - 
-  - [ ] Chrome
-  - [ ] Firefox
-  - [ ] Safari
+  - [x] ~~Chrome~~
+  - [x] ~~Firefox~~
+  - [x] ~~Safari~~
   - [ ] IE
   - [ ] Microsoft Edge
