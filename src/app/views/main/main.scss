@@ -1,12 +1,11 @@
-$primary-background: #131313;
 $primary-color: #fff;
 $primary-btn-color: #DC9530;
-$primary-font-family: Helvetica,
-Arial,
+$primary-font-family: Roboto,
 sans-serif;
 $primary-font-size: 16px;
 $link-color: #DC9530;
 $anchor-color: #AAAAAA;
+$breakpoint-alpha: 767px;
 
 /*Header*/
 
@@ -21,6 +20,7 @@ a:focus {
 
 .parent-container {
     height: 100vh;
+    font-family: $primary-font-family;
 }
 
 .navbar-header {
@@ -43,7 +43,7 @@ a:focus {
 .navbar-nav {
     .logout-link {
         display: block;
-        @media (min-width: 767px) {
+        @media (min-width: $breakpoint-alpha) {
             display: none;
         }
     }
@@ -61,14 +61,14 @@ a:focus {
         ;
         &:focus {
             color: $primary-color !important;
-            @media (max-width: 767px) {
+            @media (max-width: $breakpoint-alpha) {
                 border-bottom: 1px solid #353535;
             }
-            @media (min-width: 767px) {
+            @media (min-width: $breakpoint-alpha) {
                 border-bottom: 5px solid $link-color;
             }
         }
-        @media (max-width: 767px) {
+        @media (max-width: $breakpoint-alpha) {
             border-bottom: 1px solid #353535;
         }
     }
@@ -78,18 +78,18 @@ a:focus {
         &:hover,
         &:focus {
             color: $primary-color !important;
-            @media (max-width: 767px) {
+            @media (max-width: $breakpoint-alpha) {
                 border-bottom: 1px solid #353535;
             }
-            @media (min-width: 767px) {
+            @media (min-width: $breakpoint-alpha) {
                 border-bottom: 5px solid $link-color;
             }
         }
-        @media (max-width: 767px) {
+        @media (max-width: $breakpoint-alpha) {
             border-bottom: 1px solid #353535;
             border-left: 5px solid $link-color;
         }
-        @media (min-width: 767px) {
+        @media (min-width: $breakpoint-alpha) {
             border-bottom: 5px solid $link-color;
         }
     }
@@ -97,7 +97,7 @@ a:focus {
 
 .navbar-right {
     display: table;
-    @media (max-width: 767px) {
+    @media (max-width: $breakpoint-alpha) {
         display: none;
     }
     .profile-nav {
