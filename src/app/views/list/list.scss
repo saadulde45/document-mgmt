@@ -1,13 +1,24 @@
+@import "../../../assets/styles/_variables";
+@import "../../../assets/styles/_mixins";
+
+.button-anchor-extend {
+    a {
+        background-color: $border-color;
+        color: $text-active-color;
+        border-color: $border-color;
+    }
+}
+
 .modal {
     .modal-content {
-        background-color: #222;
-        color: #fff;
-        border-color: #616161;
+        background-color: $secondary-background-color;
+        color: $text-active-color;
+        border-color: $text-disabled-color;
     }
     .modal-header {
-        border-color: #616161;
+        border-color: $text-disabled-color;
         .close {
-            color: #fff;
+            color: $text-active-color;
             opacity: 0.7;
         }
     }
@@ -21,8 +32,7 @@
 }
 
 .list-view {
-    $breakpoint-alpha: 768px;
-    background-color: #000;
+    background-color: $primary-background-color;
     header.list-header {
         padding: 15px;
         margin: 0 5px;
@@ -31,33 +41,25 @@
             margin-top: 25px;
             text-transform: uppercase;
             color: #f2f2f2;
-            @media (max-width: $breakpoint-alpha) {
-                margin: 0 35%;
-            }
-            @media (max-width: 605px) {
-                margin: 0 30%;
-            }
-            @media (max-width: 480px) {
-                margin: 0 25%;
-            }
-            @media (max-width: 360px) {
-                margin: 0 20%;
-            }
+            @include margin($breakpoint-alpha, 35%);
+            @include margin($breakpoint-beta, 30%);
+            @include margin($breakpoint-gamma, 25%);
+            @include margin($breakpoint-omega, 20%);
         }
     }
     .table-container {
         padding: 20px;
-        background-color: #222;
+        background-color: $secondary-background-color;
         .rwd-table {
             width: 100%;
             line-height: 3;
-            color: #AAAAAA;
-            border-bottom: 1px solid #353535;
+            color: $text-inactive-color;
+            border-bottom: 1px solid $border-color;
             tr {
-                border-bottom: 1px solid #353535;
+                border-bottom: 1px solid $border-color;
             }
             th {
-                color: #fff;
+                color: $text-active-color;
                 padding-left: 10px !important;
                 display: none;
                 text-transform: uppercase;
@@ -66,7 +68,8 @@
                 display: block;
                 padding-left: 10px !important;
                 a:hover {
-                    color: #337ab7;
+                    color: $active-link-color;
+                    cursor: pointer;
                 }
                 &:before {
                     content: attr(data-th)": ";
@@ -75,9 +78,7 @@
                     line-height: 2;
                     text-transform: uppercase;
                     display: inline-block;
-                    @media (min-width: $breakpoint-alpha) {
-                        display: none;
-                    }
+                    @include hide($breakpoint-alpha);
                 }
             }
             th,
@@ -91,44 +92,30 @@
         }
     }
     footer {
-        background-color: #222;
+        background-color: $secondary-background-color;
         height: 75px;
         padding-right: 20px;
-        @media (max-width: $breakpoint-alpha) {
-            padding-right: 25%;
-        }
-        @media (max-width: 480px) {
-            padding-right: 20%;
-        }
-        @media (max-width: 360px) {
-            padding-right: 25%;
-        }
+        @include padding-right($breakpoint-alpha, 25%);
+        @include padding-right($breakpoint-gamma, 20%);
+        @include padding-right($breakpoint-omega, 25%);
         .pagination {
             float: right;
             .pagination-prev,
             .pagination-next {
-                a {
-                    background-color: #353535;
-                    color: #fff;
-                    border-color: #340;
-                }
+                @extend .button-anchor-extend;
             }
             .pagination-page {
-                a {
-                    background-color: #353535;
-                    color: #fff;
-                    border-color: #340;
-                }
+                @extend .button-anchor-extend;
             }
             .active {
                 a {
-                    background-color: #DC9530;
-                    border-color: #DC9530;
+                    background-color: $active-background-color;
+                    border-color: $active-background-color;
                 }
             }
             .disabled {
                 a {
-                    color: #616161;
+                    color: $text-disabled-color;
                 }
             }
         }

@@ -1,14 +1,5 @@
-$primary-color: #fff;
-$primary-btn-color: #DC9530;
-$primary-font-family: Roboto,
-sans-serif;
-$primary-font-size: 16px;
-$link-color: #DC9530;
-$anchor-color: #AAAAAA;
-$breakpoint-alpha: 767px;
-
-/*Header*/
-
+@import "../../../assets/styles/_variables";
+@import "../../../assets/styles/_mixins";
 a:focus {
     outline: none;
 }
@@ -43,9 +34,7 @@ a:focus {
 .navbar-nav {
     .logout-link {
         display: block;
-        @media (min-width: $breakpoint-alpha) {
-            display: none;
-        }
+        @include hide($breakpoint-alpha);
     }
     a {
         border-bottom-color: transparent;
@@ -56,42 +45,30 @@ a:focus {
         color: $anchor-color !important;
         border: 0;
         &:hover {
-            color: $primary-color !important;
+            color: $text-active-color !important;
         }
         ;
         &:focus {
-            color: $primary-color !important;
-            @media (max-width: $breakpoint-alpha) {
-                border-bottom: 1px solid #353535;
-            }
-            @media (min-width: $breakpoint-alpha) {
-                border-bottom: 5px solid $link-color;
-            }
+            color: $text-active-color !important;
+            @include border-bottom(max-width, $breakpoint-alpha, 1px, $border-color);
+            @include border-bottom(min-width, $breakpoint-alpha, 5px, $active-background-color);
         }
-        @media (max-width: $breakpoint-alpha) {
-            border-bottom: 1px solid #353535;
-        }
+        @include border-bottom(max-width, $breakpoint-alpha, 1px, $border-color);
     }
     .active {
         border: 0;
-        color: #fff !important;
+        color: $text-active-color !important;
         &:hover,
         &:focus {
-            color: $primary-color !important;
-            @media (max-width: $breakpoint-alpha) {
-                border-bottom: 1px solid #353535;
-            }
-            @media (min-width: $breakpoint-alpha) {
-                border-bottom: 5px solid $link-color;
-            }
+            color: $text-active-color !important;
+            @include border-bottom(max-width, $breakpoint-alpha, 1px, $border-color);
+            @include border-bottom(min-width, $breakpoint-alpha, 5px, $active-background-color);
         }
         @media (max-width: $breakpoint-alpha) {
-            border-bottom: 1px solid #353535;
-            border-left: 5px solid $link-color;
+            border-bottom: 1px solid $border-color;
+            border-left: 5px solid $active-background-color;
         }
-        @media (min-width: $breakpoint-alpha) {
-            border-bottom: 5px solid $link-color;
-        }
+        @include border-bottom(min-width, $breakpoint-alpha, 5px, $active-background-color);
     }
 }
 
@@ -108,7 +85,7 @@ a:focus {
         }
         li {
             .user-name {
-                color: #fff;
+                color: $text-active-color;
                 cursor: pointer;
                 .user {
                     margin-right: 5px;
@@ -123,7 +100,7 @@ a:focus {
         }
         .dropdown-menu::before {
             content: "";
-            border-bottom: 7px solid #fff;
+            border-bottom: 7px solid $text-active-color;
             border-right: 7px solid transparent;
             border-left: 7px solid transparent;
             position: absolute;
@@ -135,5 +112,5 @@ a:focus {
 
 .content {
     height: 100%;
-    background-color: #000;
+    background-color: $primary-background-color;
 }
