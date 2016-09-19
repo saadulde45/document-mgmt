@@ -1,0 +1,23 @@
+@mixin margin($breakpoint, $margin) {
+    @media (max-width: $breakpoint) {
+        margin: 0 $margin;
+    }
+}
+
+@mixin padding-right($breakpoint, $padding) {
+    @media (max-width: $breakpoint) {
+        padding-right: $padding;
+    }
+}
+
+@mixin border-bottom($width, $breakpoint, $border, $color) {
+    @media ($width: $breakpoint) {
+        border-bottom: $border solid $color;
+    }
+}
+
+@mixin hide($breakpoint) {
+    @media (min-width: $breakpoint) {
+        display: none;
+    }
+}
