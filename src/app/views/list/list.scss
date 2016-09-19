@@ -40,6 +40,9 @@
             @media (max-width: 480px) {
                 margin: 0 25%;
             }
+            @media (max-width: 360px) {
+                margin: 0 20%;
+            }
         }
     }
     .table-container {
@@ -66,6 +69,7 @@
                     content: attr(data-th)": ";
                     font-weight: bold;
                     width: 45%;
+                    line-height: 2;
                     text-transform: uppercase;
                     display: inline-block;
                     @media (min-width: $breakpoint-alpha) {
@@ -92,6 +96,9 @@
         }
         @media (max-width: 480px) {
             padding-right: 20%;
+        }
+        @media (max-width: 360px) {
+            padding-right: 25%;
         }
         .pagination {
             float: right;
