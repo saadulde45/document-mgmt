@@ -1,19 +1,20 @@
 <div class="container-fluid parent-container">
     <header>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar-inverse">
             <div class="navbar-header">
                 <a class="navbar-brand"><img src="../assets/images/logo.png" alt="logo"></a>
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <button type="button" class="navbar-toggle" ng-click="main.toggleMenu()">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
             </div>
-            <div class="navbar-collapse collapse">
+            <div id="nav-collapse-menu" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li ng-repeat="feature in userDetails.features">
                         <a ui-sref-active="active" ui-sref="app.{{feature.feature}}">{{feature.displayText}}</a>
                     </li>
+                    <li class="logout-link" role="menuitem" ng-click="main.logout()" style="cursor: pointer;"><a>Logout</a></li>
                 </ul>
                 <div class="navbar-header navbar-right">
                     <ul class="list-inline profile-nav pull-right">
