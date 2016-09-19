@@ -56,7 +56,7 @@ A simple document management application, with a login page and simulated backen
   - [x] ~~Create mock services~~
   - [x] ~~Integrate mock services~~
   - [x] ~~PDF POC integration~~
-  - [ ] Responsive layout
+  - [x] ~~Responsive layout~~
 
 4. Testing - 
   - [ ] Chrome
