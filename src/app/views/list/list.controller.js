@@ -6,13 +6,16 @@
         .controller("ListController", ListController);
 
     /** @ngInject */
-    function ListController(TableService, $log, $uibModal, $scope, toastr) {
+    function ListController(TableService, $log, $uibModal, $scope, toastr, DEBOUNCE_DELAY) {
 
         var vm = this;
 
+
+        // Max sie of pagination numbers before ellipsis is shown
         vm.maxSize = 5;
 
         function resetListConfig() {
+            // Configuration object for the table
             vm.listConfig = {
                 pageSize: 10,
                 pageNumber: 1,
@@ -43,12 +46,15 @@
 
         vm.init();
 
+
+        // To add a delay of DEBOUNCE_DELAY before the search is triggered.
         var filterResults = _.debounce(function(newValue, oldValue) {
             vm.listConfig.pageNumber = 1;
             vm.listConfig.searchString = newValue;
             vm.loadData();
-        }, 500);
+        }, DEBOUNCE_DELAY);
 
+        // Watching the searchString key for changes.
         $scope.$watch(function() {
             return vm.listConfig.searchString;
         }, function(newValue, oldValue) {
@@ -58,6 +64,7 @@
             }
         });
 
+        // Modal dialog to view PDF file.
         vm.dialog = function(document) {
             $uibModal.open({
                 animation: true,

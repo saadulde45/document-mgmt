@@ -8,7 +8,7 @@
     /** @ngInject */
     function config($logProvider, toastrConfig, $httpProvider) {
         // Enable log
-        $logProvider.debugEnabled(true);
+        // $logProvider.debugEnabled(true);
 
         // Set options third-party lib
         toastrConfig.allowHtml = true;
@@ -17,6 +17,8 @@
         toastrConfig.preventDuplicates = true;
         toastrConfig.progressBar = true;
 
+
+        // Attaching the HTTP interceptors
         $httpProvider.interceptors.push([
             '$injector',
             function($injector) {
