@@ -13,7 +13,7 @@
                 data: {
                     authorizedRoles: [USER_ROLES.admin, USER_ROLES.editor, USER_ROLES.guest]
                 },
-                redirectTo: 'app.list',
+                redirectTo: 'app.list', // Since its a partial state, redirect to valid child state
                 views: {
                     'app': {
                         templateUrl: 'app/views/main/main.html',

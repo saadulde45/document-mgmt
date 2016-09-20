@@ -1,5 +1,8 @@
 (function() {
     'use strict';
+    /* An interceptor to check whether the user is authenticated or not. 
+     * If not then broadcast a global event with error codes and messages.
+     */
 
     angular.module('documentMgmt')
         .factory('AuthInterceptor', function($rootScope, $q, AUTH_EVENTS) {

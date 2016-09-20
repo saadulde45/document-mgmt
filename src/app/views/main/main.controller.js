@@ -14,6 +14,7 @@
             AuthenticationService.logout();
         };
 
+        // Toggling the header menu for smaller devices
         vm.toggleMenu = function() {
             if(angular.element("#nav-collapse-menu").hasClass("collapse")) {
                 angular.element("#nav-collapse-menu").removeClass("collapse");

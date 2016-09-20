@@ -4,8 +4,8 @@
     /*
      * In this service the user data is defined for the current session. Within
      * angular current session is until the page is refreshed. When the page is
-     * refreshed the user is reinitialized through $window.sessionStorage at the
-     * login.js file.
+     * refreshed the user is reinitialized through $window.sessionStorage in the
+     * Authentication service.
      */
     angular.module('documentMgmt').service('Session', function() {
 
