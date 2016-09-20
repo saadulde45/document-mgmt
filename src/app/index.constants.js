@@ -3,7 +3,6 @@
 
     angular
         .module('documentMgmt')
-        .constant('moment', moment)
         .constant('DEBOUNCE_DELAY', 500)
         .constant('USER_ROLES', {
             all: '*',
